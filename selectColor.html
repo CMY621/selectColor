@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select color</title>
+    <style>
+        div{
+            position: absolute;
+            top: 30%;
+            left: 45%;
+        }
+        #color{
+            padding: 0;
+            border: none;
+            width: 80px;
+            height: 30px;
+        }
+        #colorInfo{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    　　<input type="color" name="color" id="color" onchange="changeColor()"> 
+    　　<span id="colorInfo"></span>
+    </div>
+</body>
+<script type="text/javascript">
+　　var color = document.getElementById("color"); 
+　　var colorInfo = document.getElementById("colorInfo");
+
+　　colorInfo.style.color = color.value;
+　　colorInfo.innerHTML = color.value;
+　　function changeColor(){
+　　　　colorInfo.style.color = color.value;
+　　　　colorInfo.innerHTML = color.value; 
+　　}
+</script>
+</html>
